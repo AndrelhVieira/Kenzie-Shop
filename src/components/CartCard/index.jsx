@@ -8,7 +8,7 @@ import {
 } from "./styles";
 
 import { useDispatch } from "react-redux";
-import { removeProduct } from "../../store/modules/cart/actions";
+import { removeProductThunk } from "../../store/modules/cart/thunk";
 
 const CartCard = ({ product }) => {
   const { name, price, image } = product;
@@ -16,7 +16,7 @@ const CartCard = ({ product }) => {
   const dispatch = useDispatch();
 
   const handleRemove = () => {
-    dispatch(removeProduct(product.id));
+    dispatch(removeProductThunk(product.id));
   };
 
   return (

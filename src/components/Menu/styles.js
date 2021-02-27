@@ -12,7 +12,8 @@ export const MenuDiv = styled.div`
   overflow: hidden;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
+  position: sticky;
 `;
 
 export const MenuLogo = styled.img`
@@ -49,4 +50,13 @@ export const CartButton = styled.button`
     margin: 0 5px 0;
     font-size: 0.7rem;
   }
+`;
+
+export const SpanProducts = styled.span`
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 10px;
+  margin-right: 5px;
 `;

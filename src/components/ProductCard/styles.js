@@ -65,7 +65,4 @@ export const CardButton = styled.button`
     box-shadow: 0 0 15px #000;
     transition: 0.2s;
   }
-  &:disabled {
-    cursor: not-allowed;
-  }
 `;

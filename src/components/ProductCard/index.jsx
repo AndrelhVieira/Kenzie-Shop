@@ -9,21 +9,18 @@ import {
 } from "./styles";
 
 import { useDispatch } from "react-redux";
-import { useState } from "react";
+import { addProductThunk } from "../../store/modules/cart/thunk";
 
-import { addProduct } from "../../store/modules/cart/actions";
+// import { addProduct } from "../../store/modules/cart/actions";
 
 const ProductCard = ({ product }) => {
-  const [isAdd, setIsAdd] = useState(false);
-
   const { name, price, description, image } = product;
   const { brand, model } = description;
 
   const dispatch = useDispatch();
 
   const handleAdd = () => {
-    setIsAdd(true);
-    dispatch(addProduct(product));
+    dispatch(addProductThunk(product));
   };
 
   return (
@@ -35,11 +32,7 @@ const ProductCard = ({ product }) => {
       <CardInformations>{brand}</CardInformations>
       <CardPrice>R${price}</CardPrice>
       <CardInformations>{model}</CardInformations>
-      {isAdd ? (
-        <CardButton disabled>Added</CardButton>
-      ) : (
-        <CardButton onClick={handleAdd}>Add to cart</CardButton>
-      )}
+      <CardButton onClick={handleAdd}>Add to cart</CardButton>
     </Card>
   );
 };

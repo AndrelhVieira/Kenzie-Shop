@@ -33,7 +33,9 @@ const Menu = () => {
       <ButtonsDiv>
         <CartButton onClick={goToDashboard}>Products</CartButton>
         <CartButton onClick={goToCart}>
-          {cart.length !== 0 && <SpanProducts>{cart.length}</SpanProducts>}
+          {cart.length !== 0 && cart.length !== undefined && (
+            <SpanProducts>{cart.length}</SpanProducts>
+          )}
           Your cart
         </CartButton>
       </ButtonsDiv>

@@ -28,6 +28,7 @@ const Menu = () => {
       <MenuLogo src={logo} onClick={goToHome} />
       <ButtonsDiv>
         <CartButton onClick={goToDashboard}>Products</CartButton>
+        {/* {cart !== null } */}
         <CartButton onClick={goToCart}>{cart.length} Your cart</CartButton>
       </ButtonsDiv>
     </MenuDiv>

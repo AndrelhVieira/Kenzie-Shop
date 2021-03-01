@@ -1,10 +1,4 @@
-import {
-  MenuDiv,
-  MenuLogo,
-  CartButton,
-  ButtonsDiv,
-  SpanProducts,
-} from "./styles";
+import { MenuDiv, MenuLogo, CartButton, ButtonsDiv } from "./styles";
 import logo from "../../images/logo_kenzie_shop.png";
 
 import { useHistory } from "react-router-dom";
@@ -27,17 +21,14 @@ const Menu = () => {
     history.push("/");
   };
 
+  console.log(cart);
+
   return (
     <MenuDiv>
       <MenuLogo src={logo} onClick={goToHome} />
       <ButtonsDiv>
         <CartButton onClick={goToDashboard}>Products</CartButton>
-        <CartButton onClick={goToCart}>
-          {cart.length !== 0 && cart.length !== undefined && (
-            <SpanProducts>{cart.length}</SpanProducts>
-          )}
-          Your cart
-        </CartButton>
+        <CartButton onClick={goToCart}>{cart.length} Your cart</CartButton>
       </ButtonsDiv>
     </MenuDiv>
   );

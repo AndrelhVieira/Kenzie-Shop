@@ -51,12 +51,3 @@ export const CartButton = styled.button`
     font-size: 0.7rem;
   }
 `;
-
-export const SpanProducts = styled.span`
-  background: #000;
-  color: #fff;
-  font-weight: bold;
-  padding: 5px;
-  border-radius: 10px;
-  margin-right: 5px;
-`;
